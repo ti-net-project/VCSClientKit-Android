@@ -5,7 +5,7 @@ plugins {
 }
 
 object PublicSdkConfig{
-    const val versionName = "0.3.4"
+    const val versionName = "0.3.5"
 }
 
 android {
@@ -54,7 +54,7 @@ dependencies {
 
     implementation("com.github.netless-io:fastboard-android:1.3.4")
 
-    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("com.google.code.gson:gson:2.11.0")
     implementation("com.github.bumptech.glide:glide:4.12.0")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
