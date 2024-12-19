@@ -60,7 +60,7 @@ dependencies {
 
     implementation("com.github.getActivity:Toaster:12.6")
 
-    implementation("com.github.ti-net-project:VCSClient-Android:0.3.8")
+    implementation("com.github.ti-net-project:VCSClient-Android:main-SNAPSHOT")
 }
 
 publishing {
