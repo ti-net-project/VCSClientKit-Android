@@ -5,12 +5,12 @@ plugins {
 }
 
 object PublicSdkConfig{
-    const val versionName = "0.3.11"
+    const val versionName = "0.3.12"
 }
 
 android {
     namespace = "com.tinet.vcskit"
-    compileSdk = 34
+    compileSdk = 33
 
     defaultConfig {
         minSdk = 24
