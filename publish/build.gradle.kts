@@ -5,7 +5,7 @@ plugins {
 }
 
 object PublicSdkConfig{
-    const val versionName = "0.3.10"
+    const val versionName = "0.3.11"
 }
 
 android {
@@ -29,12 +29,12 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
     }
 
     publishing {
@@ -60,7 +60,7 @@ dependencies {
 
     implementation("com.github.getActivity:Toaster:12.6")
 
-    implementation("com.github.ti-net-project:VCSClient-Android:0.3.5")
+    implementation("com.github.ti-net-project:VCSClient-Android:0.3.8")
 }
 
 publishing {
