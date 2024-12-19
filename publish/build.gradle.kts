@@ -5,7 +5,7 @@ plugins {
 }
 
 object PublicSdkConfig{
-    const val versionName = "0.3.6"
+    const val versionName = "0.3.7"
 }
 
 android {
@@ -29,12 +29,12 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
     }
 
     publishing {
@@ -44,7 +44,7 @@ android {
 
 dependencies {
     implementation(fileTree("include" to "*.jar", "dir" to "libs"))
-    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.appcompat:appcompat:1.5.1")
     implementation("androidx.cardview:cardview:1.0.0")
 
     val agoraSdkVersion = "4.3.2"
@@ -60,7 +60,7 @@ dependencies {
 
     implementation("com.github.getActivity:Toaster:12.6")
 
-    implementation("com.github.ti-net-project:VCSClient-Android:main-SNAPSHOT")
+    implementation("com.github.ti-net-project:VCSClient-Android:0.3.5")
 }
 
 publishing {
