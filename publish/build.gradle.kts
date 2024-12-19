@@ -5,7 +5,7 @@ plugins {
 }
 
 object PublicSdkConfig{
-    const val versionName = "0.3.7"
+    const val versionName = "0.3.8"
 }
 
 android {
@@ -44,7 +44,7 @@ android {
 
 dependencies {
     implementation(fileTree("include" to "*.jar", "dir" to "libs"))
-    implementation("androidx.appcompat:appcompat:1.5.1")
+    implementation("androidx.appcompat:appcompat:1.4.2")
     implementation("androidx.cardview:cardview:1.0.0")
 
     val agoraSdkVersion = "4.3.2"
