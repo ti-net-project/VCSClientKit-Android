@@ -7,7 +7,7 @@ plugins {
 }
 
 object PublicSdkConfig{
-    const val versionName = "0.3.14"
+    const val versionName = "1.0.0"
 }
 
 android {
@@ -66,7 +66,7 @@ dependencies {
 
     implementation("com.github.getActivity:Toaster:12.6")
 
-    implementation("com.github.ti-net-project:VCSClient-Android:main-SNAPSHOT")
+    implementation("com.github.ti-net-project:VCSClient-Android:1.0.0")
 }
 
 publishing {
