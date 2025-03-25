@@ -7,7 +7,7 @@ plugins {
 }
 
 object PublicSdkConfig{
-    const val versionName = "1.0.0"
+    const val versionName = "1.1.0"
 }
 
 android {
@@ -54,7 +54,7 @@ dependencies {
     implementation("androidx.cardview:cardview:1.0.0")
 
     val agoraSdkVersion = "4.3.2"
-    implementation("io.agora.rtc:full-rtc-basic:${agoraSdkVersion}")
+//    implementation("io.agora.rtc:full-rtc-basic:${agoraSdkVersion}")
     implementation("io.agora.rtc:full-screen-sharing:${agoraSdkVersion}")
     implementation("io.agora.rtc:screen-capture:${agoraSdkVersion}")
 
@@ -66,7 +66,7 @@ dependencies {
 
     implementation("com.github.getActivity:Toaster:12.6")
 
-    implementation("com.github.ti-net-project:VCSClient-Android:1.0.0")
+    implementation("com.github.ti-net-project:VCSClient-Android:1.1.0")
 }
 
 publishing {
