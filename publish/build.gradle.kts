@@ -7,7 +7,8 @@ plugins {
 }
 
 object PublicSdkConfig{
-    const val versionName = "1.1.0"
+    const val kitVersionName = "1.1.1"
+    const val libVersionName = "1.1.1"
 }
 
 android {
@@ -49,6 +50,16 @@ android {
 }
 
 dependencies {
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+
+    implementation("androidx.compose.ui:ui:1.6.0")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.6.0")
+    implementation("androidx.compose.material:material:1.6.0")
+    implementation("androidx.compose.material3:material3:1.2.0")
+    implementation("androidx.compose.foundation:foundation:1.6.0")
+    implementation("androidx.compose.animation:animation:1.6.0")
+    implementation("androidx.compose.runtime:runtime:1.6.0")
+
     implementation(fileTree("include" to "*.jar", "dir" to "libs"))
     implementation("androidx.appcompat:appcompat:1.4.2")
     implementation("androidx.cardview:cardview:1.0.0")
@@ -64,9 +75,11 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.12.0")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
+    implementation("io.coil-kt:coil-compose:2.4.0")
+
     implementation("com.github.getActivity:Toaster:12.6")
 
-    implementation("com.github.ti-net-project:VCSClient-Android:1.1.0")
+    implementation("com.github.ti-net-project:VCSClient-Android:${PublicSdkConfig.libVersionName}")
 }
 
 publishing {
@@ -74,7 +87,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.github.ti-net-project"
             artifactId = "VCSClientKit-Android"
-            version = PublicSdkConfig.versionName
+            version = PublicSdkConfig.kitVersionName
 
             afterEvaluate {
                 from(components["release"])
@@ -84,8 +97,8 @@ publishing {
 }
 
 
-val version = PublicSdkConfig.versionName
-val sdkFile = "VCSClientKit_${PublicSdkConfig.versionName}_release.zip"
+val version = PublicSdkConfig.kitVersionName
+val sdkFile = "VCSClientKit_${PublicSdkConfig.kitVersionName}_release.zip"
 val zipPackagesPath = File("${rootDir.absolutePath}/zip_packages/$sdkFile")
 
 task<Delete>("deleteExpiredFiles"){
