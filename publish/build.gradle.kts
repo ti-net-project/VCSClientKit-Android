@@ -7,8 +7,8 @@ plugins {
 }
 
 object PublicSdkConfig{
-    const val kitVersionName = "1.1.1"
-    const val libVersionName = "1.1.1"
+    const val kitVersionName = "1.1.4"
+    const val libVersionName = "1.1.4"
 }
 
 android {
@@ -76,6 +76,9 @@ dependencies {
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
     implementation("io.coil-kt:coil-compose:2.4.0")
+
+    implementation("androidx.media3:media3-exoplayer:1.2.1")
+    implementation("androidx.media3:media3-ui:1.2.1")
 
     implementation("com.github.getActivity:Toaster:12.6")
 
